@@ -1,100 +1,310 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>p7</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Andrea</title>
 
-    .container {
-      display: flex;
-      flex-direction: column;
-    }
+<!-- TIPOGRAFÍA -->
 
-    .row {
-      overflow: hidden;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      background: #8c99f0;
-      height: 50vh;
-      position: relative;
-      padding-left: 40px;
-    }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap" rel="stylesheet">
 
-    .circle {
-      width: 350px;
-      height: 350px;
-      border-radius: 50%;
-      background: #a5f8e5;
-      flex-shrink: 0;
-    }
+<style>
 
-    .circle-right {
-      position: absolute;
-      right: -80px;
-    }
-
-    .links {
-      display: flex;
-      flex-direction: column;
-      margin-left: 40px;
-      gap: 20px;
-    }
-
-    .links a {
-      color: white;
-      font-size: 28px;
-      text-decoration: underline;
-    }
-    
-    .corner {
-      position: absolute;
-      width: 200px;
-      height: 200px;
-      background: white;
-      z-index: 5;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
-.top-left {
-      top: 0;
-      left: 0;
+
+body{
+    background:#b7ece2;
+    font-family:"JetBrains Mono", monospace;
+    color:black;
+    min-height:100vh;
 }
-.bottom-right {
-      bottom: 0;
-      right: 0;
+
+/* CONTENEDOR */
+
+.container{
+    width:100%;
+    min-height:100vh;
+    display:grid;
+    grid-template-rows:auto auto 1fr auto;
+    justify-items:center;
+    align-items:center;
+    padding:40px;
+    gap:80px;
+    position:relative;
 }
-  </style>
+
+/* TEXTO FONDO */
+
+.background-text{
+
+    position:absolute;
+    top:20px;
+    font-size:8vw;
+    font-weight:800;
+    color:rgba(0,0,0,0.08);
+    letter-spacing:10px;
+    z-index:0;
+}
+
+/* TITULO */
+
+.title{
+    z-index:2;
+    text-align:center;
+}
+
+.title h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.line{
+    width:500px;
+    height:3px;
+    background:black;
+}
+
+/* GRID */
+
+.projects{
+
+    width:100%;
+    max-width:1200px;
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:80px 40px;
+    text-align:center;
+    z-index:2;
+}
+
+/* LINKS */
+
+.link{
+    text-decoration:none;
+    color:black;
+}
+
+/* CARDS */
+
+.card{
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.08);
+}
+
+.card h2{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+.card p{
+    font-size:1.4rem;
+    line-height:1.3;
+}
+
+/* FOOTER */
+
+.footer{
+    margin-top:40px;
+    font-size:3rem;
+    z-index:2;
+}
+
+.name-link{
+    text-decoration:none;
+    color:black;
+    transition:0.3s;
+}
+
+.name-link:hover{
+    opacity:0.6;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1100px){
+
+    .projects{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
+
+@media(max-width:900px){
+
+    .container{
+
+        grid-template-rows:auto auto 1fr auto;
+
+        padding:30px;
+        gap:50px;
+    }
+
+    .background-text{
+
+        font-size:14vw;
+
+        text-align:center;
+
+        top:40px;
+    }
+
+    .title h1{
+        font-size:2.5rem;
+    }
+
+    .line{
+        width:250px;
+    }
+
+    .projects{
+
+        grid-template-columns:1fr 1fr;
+
+        gap:50px 20px;
+    }
+
+    .card h2{
+        font-size:2rem;
+    }
+
+    .card p{
+        font-size:1rem;
+    }
+
+    .footer{
+        font-size:1.5rem;
+        text-align:center;
+    }
+
+}
+
+</style>
 </head>
 <body>
-  <div class="container">
 
-    <div class="row">
-      <div class="circle"></div>
-      <div class="links">
-        <a href="https://anddur19.github.io/p1/">P1</a>
-        <a href="https://anddur19.github.io/p2/">P2</a>
-        <a href="https://anddur19.github.io/p3/">P3</a>
-        <a href="https://anddur19.github.io/P4/">P4</a>
-        <a href="https://anddur19.github.io/p5_1/">P5_1</a>
-        <a href="https://anddur19.github.io/p5_2/">P5_2</a>
-      </div>
+<div class="container">
+
+    <!-- TEXTO FONDO -->
+    <div class="background-text">
+        HTML, CSS, FIGMA
     </div>
 
-    <div class="row">
-      <div class="links">
-        <a href="https://anddur19.github.io/proyecto-6/">P6</a>
-        <a href="https://anddur19.github.io/p8/">P8</a>
-        <a href="https://anddur19.github.io/p9/">P9</a>
-        <a href="https://www.figma.com/design/aCtmWdX3ZYYyciwVGrM9tU/p11?node-id=2-41&t=ILM0wjJS2JuO5tKB-1">P10</a>
-        <a href="https://www.figma.com/design/APRaF5ILFJO0UImkNddrLD/p11?node-id=0-1&t=ircmosOfKVjB8zqs-1">P11</a>
-      </div>
-      <div class="circle circle-right"></div>
+    <!-- TITULO -->
+    <div class="title">
+        <h1>HTML, CSS, FIGMA</h1>
+        <div class="line"></div>
     </div>
 
-  </div>
+    <!-- GRID -->
+    <div class="projects">
+
+        <a href="https://anddur19.github.io/p1/" class="link">
+            <div class="card">
+                <h2>p1</h2>
+                <p>Edición de<br>código</p>
+            </div>
+        </a>
+
+        <a href="https://anddur19.github.io/p2/" class="link">
+            <div class="card">
+                <h2>p2</h2>
+                <p>Linktree<br>html</p>
+            </div>
+        </a>
+
+        <a href="https://anddur19.github.io/p3/" class="link">
+            <div class="card">
+                <h2>p3</h2>
+                <p>Linktree<br>semantics</p>
+            </div>
+        </a>
+
+        <a href="https://anddur19.github.io/P4/" class="link">
+            <div class="card">
+                <h2>p4</h2>
+                <p>Linktree<br>boxmodel</p>
+            </div>
+        </a>
+
+        <a href="https://anddur19.github.io/p5_1/" class="link">
+            <div class="card">
+                <h2>p5.1</h2>
+                <p>Obra<br>Joseph<br>Albers</p>
+            </div>
+        </a>
+
+        <a href="https://anddur19.github.io/p5_2/" class="link">
+            <div class="card">
+                <h2>p5.2</h2>
+                <p>Índex<br>editorial</p>
+            </div>
+        </a>
+
+        <a href="https://anddur19.github.io/p7/" class="link">
+            <div class="card">
+                <h2>p6</h2>
+                <p>Figma<br>autolayout</p>
+            </div>
+        </a>
+
+        <a href="https://anddur19.github.io/p7/" class="link">
+            <div class="card">
+                <h2>p7</h2>
+                <p>Portafolio<br>autolayout /<br>flex</p>
+            </div>
+        </a>
+
+        <a href="https://anddur19.github.io/p8/" class="link">
+            <div class="card">
+                <h2>p8</h2>
+                <p>Processing</p>
+            </div>
+        </a>
+
+        <a href="https://anddur19.github.io/p9/" class="link">
+            <div class="card">
+                <h2>p9</h2>
+                <p>Calendar</p>
+            </div>
+        </a>
+
+        <a href="https://www.figma.com/design/aCtmWdX3ZYYyciwVGrM9tU/p11?node-id=2-41&t=ILM0wjJS2JuO5tKB-1" class="link">
+            <div class="card">
+                <h2>p10</h2>
+                <p>Wireframe<br>y<br>prototype</p>
+            </div>
+        </a>
+
+        <a href="https://www.figma.com/design/APRaF5ILFJO0UImkNddrLD/p11?node-id=0-1&t=ircmosOfKVjB8zqs-1" class="link">
+            <div class="card">
+                <h2>p11</h2>
+                <p>Card</p>
+            </div>
+        </a>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <a href="file:///Users/andrea/Documents/SEGUNDO/RECURSOS%20INTERACTIVOS%20APLICADOS/SEGUNDA%20EVALUACIO%CC%81N/p%2012/project/index2.html" class="name-link">
+            Andrea Durán Martínez
+        </a>
+
+    </footer>
+
+</div>
+
 </body>
 </html>

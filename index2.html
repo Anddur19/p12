@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andrea Durán Martínez</title>
+
+<!-- JETBRAINS MONO -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#b7ece2;
+    font-family:"JetBrains Mono", monospace;
+    min-height:100vh;
+    color:black;
+}
+
+/* CONTENEDOR */
+
+.container{
+    width:100%;
+    min-height:100vh;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:auto 1fr;
+
+    padding:60px;
+    gap:60px;
+}
+
+/* NOMBRE */
+
+.name-link{
+    text-decoration:none;
+    color:black;
+    width:max-content;
+}
+
+.name{
+    font-size:4rem;
+    font-weight:800;
+}
+
+/* FOTO */
+
+.photo-section{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+}
+
+.photo{
+    width:300px;
+    border-radius:40px;
+}
+
+/* TEXTO */
+
+.text-section{
+    display:grid;
+    gap:50px;
+    align-content:start;
+
+    font-size:1.8rem;
+    line-height:1.4;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .container{
+        grid-template-columns:1fr;
+    }
+
+    .name{
+        font-size:2.5rem;
+    }
+
+    .text-section{
+        font-size:1.2rem;
+    }
+
+    .photo{
+        width:220px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- NOMBRE CON LINK -->
+
+    <a href="https://anddur19.github.io/" class="name-link">
+        <h1 class="name">Andrea Durán Martínez</h1>
+    </a>
+
+    <div></div>
+
+    <!-- FOTO -->
+
+    <div class="photo-section">
+
+        <!-- CAMBIA foto.jpg POR TU IMAGEN -->
+
+        <img src="/Users/andrea/Documents/SEGUNDO/RECURSOS INTERACTIVOS APLICADOS/SEGUNDA EVALUACIÓN/p 12/IMÁGENES/Yo.png" alt="Andrea" class="photo">
+
+    </div>
+
+    <!-- TEXTO -->
+
+    <div class="text-section">
+
+        <p>
+            Me llamo Andrea Durán Martínez, tengo 25 años y estoy
+            estudiando un grado superior de Gráfica Publicitaria en Alcoy.
+        </p>
+
+        <p>
+            Me considero una persona creativa, trabajadora,
+            simpática, atenta aunque no siempre por mucho que lo intente.
+        </p>
+
+        <p>
+            Mis hobbies son leer, dibujar, bailar y escuchar música,
+            pero también me gusta el deporte o ir al gimnasio.
+        </p>
+
+        <p>
+            He estudiado un grado medio de Pre Impresión Digital y
+            ahora estoy estudiando un grado superior de Gráfica
+            Publicitaria porque me gusta mucho diseñar, dibujar a mano
+            y en digital y el mundo del diseño me parece interesante.
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>
